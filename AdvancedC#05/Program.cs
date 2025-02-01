@@ -238,6 +238,21 @@ namespace AdvancedC_05
             #endregion
 
             #endregion
+            #region Generic Collection "Sorted List" [Two Arrays]
+            //SortedList<string,int> SortedList = new SortedList<string, int>()
+            //{
+            //    ["Ahmed"] = 111,
+            //    ["Nour"] = 222,
+            //    ["Radwa"] = 333,
+            //    ["Basma"] = 444
+            //};
+            //Console.WriteLine($"GetKeyAtIndex(0):{SortedList.GetKeyAtIndex(0)}");
+            //Console.WriteLine($"GetValueAtIndex(0):{SortedList.GetValueAtIndex(0)}");
+            //foreach(var Person in SortedList)
+            //{
+            //    Console.WriteLine($"Name:{Person.Key}:::Number:{Person.Value}");
+            //}
+            #endregion
         }
     }
 }
