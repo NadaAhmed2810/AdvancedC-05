@@ -345,7 +345,18 @@ namespace AdvancedC_05
             //  Console.WriteLine(x);
             //}
             #endregion
-            #region Generic Collection _Sorted List [Balanced BTS]
+            #region Generic Collection _Sorted set [Balanced BTS]
+            #region Example01
+            //SortedSet<int> Numbers = new SortedSet<int>() { 4,1, 6,5, 8, 9, 8 };
+            //Numbers.Min();
+            //Numbers.Max();
+            //Numbers.GetViewBetween(4,10);
+            //foreach (int i in Numbers)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            #endregion
+            #region Example02
             //SortedSet<Movie> movies = new SortedSet<Movie>(new MovieComparer())
             //{
             //     new Movie(){Code =10,Title="Titanic" ,Price=100},
@@ -357,7 +368,9 @@ namespace AdvancedC_05
             //foreach (Movie movie in movies)
             //{
             //    Console.WriteLine(movie);
-            //}
+            //} 
+            #endregion
+
 
             #endregion
         }
