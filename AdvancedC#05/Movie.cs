@@ -6,11 +6,24 @@ using System.Threading.Tasks;
 
 namespace AdvancedC_05
 {
-    internal class Movie:IEquatable<Movie>
+    class MovieComparer : IComparer<Movie>
+    {
+        public int Compare(Movie? x, Movie? y)
+        {
+           return x?.Title?.CompareTo(y?.Title??" ")??(y is null?0:-1);
+        }
+    }
+    internal class Movie:IEquatable<Movie>, IComparable<Movie>
     {
         public int Code { get; set; }
         public string? Title { get; set; }
         public decimal Price { get; set; }
+
+        public int CompareTo(Movie? other)
+        {
+            if (other == null) return 1;
+            return Code.CompareTo(other.Code);
+        }
 
         public bool Equals(Movie? other)
         {

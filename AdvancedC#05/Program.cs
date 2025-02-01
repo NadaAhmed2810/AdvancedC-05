@@ -324,6 +324,21 @@ namespace AdvancedC_05
 
 
             #endregion
+            #region Generic Collection _Sorted List [Balanced BTS]
+            //SortedSet<Movie> movies = new SortedSet<Movie>(new MovieComparer())
+            //{
+            //     new Movie(){Code =10,Title="Titanic" ,Price=100},
+            //    new Movie(){Code =20,Title="Black Adam" ,Price=200},
+            //    new Movie(){Code=30,Title="Another One" ,Price=300},
+            //};
+            //movies.Min();
+            //movies.Max();
+            //foreach (Movie movie in movies)
+            //{
+            //    Console.WriteLine(movie);
+            //}
+
+            #endregion
         }
     }
 }
