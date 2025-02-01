@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.Net.Http.Headers;
 
 namespace AdvancedC_05
 {
@@ -66,6 +68,18 @@ namespace AdvancedC_05
         public int Compare(Employee? x, Employee? y)
         {
            return x?.Name?.CompareTo(y?.Name??string.Empty)?? (y is null?0:-1);
+        }
+    }
+    class MovieEqualityCompare : IEqualityComparer<Movie>
+    {
+        public bool Equals(Movie? x, Movie? y)
+        {
+            return x?.Code==y?.Code && x?.Price==y?.Price;
+        }
+
+        public int GetHashCode([DisallowNull] Movie obj)
+        {
+           return HashCode.Combine(obj.Code, obj.Price);
         }
     }
     internal class Program
@@ -291,7 +305,24 @@ namespace AdvancedC_05
             //{
             //    Console.WriteLine(movie);
             //}
-                    
+            #region Hashset Constructor
+            //Movie[] movies = [
+            //    new Movie() { Code = 10, Title = "Titanic", Price = 100 },
+            //    new Movie() { Code = 20, Title = "Black Adam", Price = 200 },
+            //    new Movie() { Code = 30, Title = "Another One", Price = 300 },
+            //    new Movie() { Code = 30, Title = "Another One", Price = 300 } ,
+            //    new Movie() { Code = 30, Title = "Another One", Price = 300 },
+            //    new Movie() { Code = 30, Title = "Another One", Price = 300 }
+            //    ];
+            //HashSet<Movie> set = new HashSet<Movie>(movies, new MovieEqualityCompare());
+
+            //foreach (Movie movie in set)
+            //{
+            //    Console.WriteLine(movie);
+            //} 
+            #endregion
+
+
             #endregion
         }
     }
