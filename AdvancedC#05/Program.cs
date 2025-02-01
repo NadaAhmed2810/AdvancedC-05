@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Diagnostics.CodeAnalysis;
 
 namespace AdvancedC_05
@@ -40,7 +41,14 @@ namespace AdvancedC_05
             return obj.ToLower().GetHashCode();
         }
     }
-    class EmployeeComparer : IEqualityComparer<Employee>
+    class StringDecsComparer : IComparer<string>
+    {
+        public int Compare(string? x, string? y)
+        {
+           return y?.CompareTo(x)??(x is null?0:-1);
+        }
+    }
+    class EmployeeEqualityComparer : IEqualityComparer<Employee>
     {
         public bool Equals(Employee? x, Employee? y)
         {
@@ -53,6 +61,13 @@ namespace AdvancedC_05
         }
     }
 
+    class EmployeeComparer : IComparer<Employee>
+    {
+        public int Compare(Employee? x, Employee? y)
+        {
+           return x?.Name?.CompareTo(y?.Name??string.Empty)?? (y is null?0:-1);
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -190,6 +205,38 @@ namespace AdvancedC_05
             //    Console.WriteLine(value);
             //} 
             #endregion
+            #endregion
+            #region Generic Collection Sorted Dictionary [Binary search tree]
+            #region Example01
+            //SortedDictionary<string, int> SortedNote = new SortedDictionary<string, int>(new StringDecsComparer())
+            //{
+            //    ["Ahmed"] = 111,
+            //    ["Nour"]=222,
+            //    ["Radwa"]=333,
+            //    ["Basma"]=444
+            //};
+            //foreach (var Person in SortedNote)
+            //{
+            //     Console.WriteLine($"Name:{Person.Key}:::Number:{Person.Value}");
+            //} 
+            #endregion
+            #region Example02
+            //Employee employee01 = new Employee(10, "Nada", 10000);
+            //Employee employee02 = new Employee(200, "Nour", 20000);
+            //Employee employee03 = new Employee(30, "Noura", 30000);
+            //SortedDictionary<Employee,string > Employees= new SortedDictionary<Employee, string>(new EmployeeComparer())
+            //{
+            //    [employee01] = employee01.ToString(),
+            //    [employee02] = employee02.ToString(),
+            //    [employee03] = employee03.ToString(),
+            //};
+
+            //foreach(var employee in Employees)
+            //{
+            //    Console.WriteLine($"Name:{employee.Key}:::Number:{employee.Value}");
+            //} 
+            #endregion
+
             #endregion
         }
     }

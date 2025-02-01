@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdvancedC_05
 {
-    internal class Employee:IEquatable<Employee>
+    internal class Employee:IEquatable<Employee>,IComparable<Employee>
     {
         public int Id { get; set; }
         public string? Name { get; set; }
@@ -31,6 +31,11 @@ namespace AdvancedC_05
         public override int GetHashCode()
         {
             return HashCode.Combine(Id,Salary,Name);
+        }
+
+        public int CompareTo(Employee? other)
+        {
+           return Id.CompareTo(other?.Id??0);
         }
     }
 }
