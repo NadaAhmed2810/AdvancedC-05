@@ -253,6 +253,46 @@ namespace AdvancedC_05
             //    Console.WriteLine($"Name:{Person.Key}:::Number:{Person.Value}");
             //}
             #endregion
+            #region Generic Collection Hashset 
+            //HashSet<int>Numbers= new HashSet<int>()
+            //{
+            //    8,10,5,4,8,1,10,3,7,3
+            //};
+            //foreach (var Num in Numbers)
+            //{
+            //    Console.WriteLine(Num);
+            //}
+
+            //Employee employee01 = new Employee(10, "Nada", 10000);
+            //Employee employee02 = new Employee(20, "Nour", 20000);
+            //Employee employee03 = new Employee(30, "Noura", 30000);
+            //HashSet<Employee> set = new HashSet<Employee>()
+            //{
+            //    new Employee(10, "Nada", 10000),
+            //    new Employee(20, "Nour", 20000),
+            //    new Employee(30, "Noura", 30000),
+            //    new Employee(30, "Noura", 30000),
+            //    new Employee(20, "Nour", 20000)
+            //};
+            //foreach (Employee employee in set)
+            //{
+            //    Console.WriteLine(employee);
+            //}
+
+            //HashSet<Movie> movies = new HashSet<Movie>()
+            //{
+            //    new Movie(){Code =10,Title="Titanic" ,Price=100},
+            //    new Movie(){Code =20,Title="Black Adam" ,Price=200},
+            //    new Movie(){Code=30,Title="Another One" ,Price=300},
+            //    new Movie(){Code=30,Title="Another One" ,Price=300},
+            //    new Movie(){Code=30,Title="Another One" ,Price=300}
+            //};
+            //foreach (Movie movie in movies)
+            //{
+            //    Console.WriteLine(movie);
+            //}
+                    
+            #endregion
         }
     }
 }
