@@ -324,6 +324,27 @@ namespace AdvancedC_05
 
 
             #endregion
+            #region ISet
+            //HashSet<int> Set01 = new HashSet<int>() { 1, 2, 3, 4, 5 };
+            //HashSet<int> Set02 = new HashSet<int> { 1, 2, 3, 4, 5,6,7,8,9,10};
+            //Set02.ExceptWith(Set01);//Set02=Set02-Set01;
+            //Set02.IntersectWith(Set01);
+            //Set02.Union(Set01);
+            //Set02.SymmetricExceptWith(Set01);
+
+            //Console.WriteLine( Set01.IsSubsetOf(Set02));//True 
+            //Console.WriteLine(Set01.IsProperSubsetOf(Set02)); //set01 subset of set02 and not equal set02
+
+            //Console.WriteLine(Set02.IsSupersetOf(Set01));//True 
+            //Console.WriteLine(Set02.IsProperSupersetOf(Set01)); //set01 subset of set02 and not equal set02
+
+            //Console.WriteLine(Set01.Overlaps(Set02));
+            //Console.WriteLine(Set01.Equals(Set02));
+            //foreach (var x in Set02) 
+            //{
+            //  Console.WriteLine(x);
+            //}
+            #endregion
             #region Generic Collection _Sorted List [Balanced BTS]
             //SortedSet<Movie> movies = new SortedSet<Movie>(new MovieComparer())
             //{
