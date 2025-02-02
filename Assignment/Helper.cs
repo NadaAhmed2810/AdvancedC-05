@@ -27,5 +27,13 @@ namespace Assignment
             num1 = num2;
             num2 = Temp;
         }
+        public static List<int> GetEvenNumbers(List<int> Numbers)
+        {
+            List<int> Result= new List<int>();
+            for (int i = 0;i < Numbers.Count;i++)
+                if (Numbers[i]%2==0)
+                    Result.Add(Numbers[i]);
+            return Result;
+        }
     }
 }
