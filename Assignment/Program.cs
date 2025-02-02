@@ -4,6 +4,35 @@ namespace Assignment
 {
     internal class Program
     {
+        public static int FirstNonRepeatedChar(string s)
+        {
+            s = s.ToLower();
+            int res = -1;
+            Dictionary<Char, int> dict = new Dictionary<Char, int>();
+            if (s != null)
+            {
+                for (int i = 0; i < s.Length; i++)
+                {
+                    if (dict.ContainsKey(s[i]))
+                    {
+                        dict[s[i]]++;
+                    }
+                    else
+                    {
+                        dict[s[i]] = 1;
+                    }
+                }
+                for (int i = 0; i < s.Length; i++)
+                {
+                    if (dict[s[i]] == 1)
+                    {
+                        res = i;
+                        return res;
+                    }
+                }
+            }
+            return res;
+        }
         static void Main(string[] args)
         {
             #region Q1:You are given an ArrayList containing a sequence of elements. try to reverse the order of elements in the ArrayList in-place(in the same arrayList) without using the built-in Reverse. Implement a function that takes the ArrayList as input and modifies it to have the reversed order of elements.
@@ -56,6 +85,10 @@ namespace Assignment
 
 
 
+            #endregion
+            #region Q4:Given a string, find the first non-repeated character in it and return its index. If there is no such character, return -1. Hint you can use dictionary
+            //string Name = "NouraandNourandRadwaAndSalma";
+            //Console.WriteLine(FirstNonRepeatedChar(Name));
             #endregion
         }
     }
